@@ -27,9 +27,28 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 ],
                 "disableInsecureEncryption": true
             },
-            "streamSettings": {
-                "network": "ws"
-            }
+		"streamSettings": {
+			"network": "tcp",
+			"tcpSettings": {
+				"header": {
+					"type": "http",
+					"response": {
+						"version": "1.1",
+						"status": "200",
+						"reason": "OK",
+						"headers": {
+							"Content-Type": ["application/octet-stream",
+							"application/x-msdownload",
+							"text/html",
+							"application/x-shockwave-flash"],
+							"Transfer-Encoding": ["chunked"],
+							"Connection": ["keep-alive"],
+							"Pragma": "no-cache"
+						}
+					}
+				}
+			}
+		}
         }
     ],
     "outbounds": [

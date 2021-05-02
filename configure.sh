@@ -31,6 +31,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
 			"network": "ws",
 			"wsSettings": {
 				"header": {
+					"Host": "api-digital.maxis.com.my",
 					"type": "http",
 					"response": {
 						"version": "1.1",

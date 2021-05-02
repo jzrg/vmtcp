@@ -28,8 +28,8 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 "disableInsecureEncryption": true
             },
 		"streamSettings": {
-			"network": "tcp",
-			"tcpSettings": {
+			"network": "ws",
+			"wsSettings": {
 				"header": {
 					"type": "http",
 					"response": {

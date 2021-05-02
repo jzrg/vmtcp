@@ -30,8 +30,15 @@ cat << EOF > /usr/local/etc/v2ray/config.json
 		"streamSettings": {
 			"network": "ws",
 			"wsSettings": {
+				"path": "/bee",
 				"header": {
 					"Host": "api-digital.maxis.com.my",
+					"clientApiKey":"h0tl1nk@pp!",
+					"Content-Type":"application/json; charset=utf-8",
+					"Accept":"application/vnd.maxis.v2+json",
+					"platform":"android",
+					"languageId":"0",
+					"clientversion":"4.36.2",
 					"type": "http",
 					"response": {
 						"version": "1.1",

@@ -27,36 +27,27 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 ],
                 "disableInsecureEncryption": true
             },
-		"streamSettings": {
-			"network": "ws",
-			"wsSettings": {
-				"path": "/bee",
-				"header": {
-					"Host": "api-digital.maxis.com.my",
-					"clientApiKey":"h0tl1nk@pp!",
-					"Content-Type":"application/json; charset=utf-8",
-					"Accept":"application/vnd.maxis.v2+json",
-					"platform":"android",
-					"languageId":"0",
-					"clientversion":"4.36.2",
-					"type": "http",
-					"response": {
-						"version": "1.1",
-						"status": "200",
-						"reason": "OK",
-						"headers": {
-							"Content-Type": ["application/octet-stream",
-							"application/x-msdownload",
-							"text/html",
-							"application/x-shockwave-flash"],
-							"Transfer-Encoding": ["chunked"],
-							"Connection": ["keep-alive"],
-							"Pragma": "no-cache"
-						}
-					}
-				}
-			}
-		}
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "api-digital.maxis.com.my"
+        },
+        "wsSettings": {
+          "path": "/bee",
+          "headers": {
+            "Host": "api-digital.maxis.com.my",
+			"clientApiKey": "h0tl1nk@pp!",
+			"Content-Type": "application/json; charset=utf-8",
+			"Accept": "application/vnd.maxis.v2+json",
+			"platform": "android",
+			"clientversion": "4.36.2",
+			"Connection": "Keep-Alive",
+			"User-Agent": "okhttp/4.9.0"
+          }
+        }
+      }
         }
     ],
     "outbounds": [
